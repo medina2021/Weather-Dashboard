@@ -13,61 +13,29 @@
     </header>
 
     <!-- for all weather data to render -->
-    <div class="col-lg-8">
-    <div class="row weather-box">
-    <div class= "col-lg-12">
-        <div class="weather-cont"></div>
-        <span>
-            <div class="city"></div><img id="wicon"></img>
-            <div class="status"></div>
-        </span>
-    <div class="temp"></div>
-    <div class="humidity"></div>
-    <div class="wind"></div>
-    </div>
-    </div>
-    </div>
-    <hr>
+    <div id="content" class="container">
+        <div class="row">
+            <div id="content-left" class="col-md-3">
+                <form>
+                    <label for="search-city">Search for a City </label>
+                        <div class="form-row">
+                            <input id="search-city" class="form-control" name="city" value="fontana"></input>
+                            <button id="search-button" class="btn btn primary" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                </form>
+                <div id="search-error"></div>
+                <ul id="city-results" class="list-group mt-4"></ul>
+                <a id="clear-storage" href="#"></a>
+            </div>
 
-    <div class="row">
-    <div class="col-lg-12 forecast">
-    <h4 class="5day">Five Day Forecast</h4>
-    <!-- 1st day forecast -->
-    <div class="text-center">
-        <div class="card">
-            <div class="card-body" id="day1">
-            </div>
+        <div id="content-right" class="col-md-9 pt4">
+            <div id="current-weather" class="border rounded"></div>
+
+            <div id="five-day-forecast" class="mt-5"></div>
         </div>
-        <!-- 2nd day forecast -->
-        <div class="text-center">
-            <div class="card">
-                <div class="card-body" id="day2">
-                </div>
-            </div>
-        <!-- 3rd day forecast -->
-        <div class="text-center">
-            <div class="card">
-                <div class="card-body" id="day3">
-                </div>
-            </div>
-        <!-- 4th day forecast -->
-        <div class="text-center">
-            <div class="card">
-                <div class="card-body" id="day4">
-                </div>
-            </div>
-        <!-- 5th day forecast -->
-        <div class="text-center">
-            <div class="card">
-                <div class="card-body" id="day5">
-                </div>
-            </div>        
     </div>
-</div>
-</div>
-    </div>
-    </div>
-    </div>
+ </div>        
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
