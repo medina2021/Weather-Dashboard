@@ -74,5 +74,18 @@ function currentWeather(){
       url: queryURL,
       method:"GET"
     })
-  })
-}
+    .then(function(response) {
+     var icons = response.weather[0].icon;
+
+    var urlIcon="http://openweathermap.org/img/w/" + icons + ".png";
+    $(".city").html("<h1>" + response.name + "</h1>");
+    $(".temp").text("temperature:" + ((response.main.temp - 273.15) * 1.8 +32).toFixed(0)+ "°F");
+    $(".humidity").text("Humidity:" + response.main.humidity + "%");
+    $(".wind").text("Wind Speed:" + response.wind.speed + "MPH");
+    $("#wicon").attr("src", urlIcon);
+
+  });
+});
+};
+
+currentWeather();

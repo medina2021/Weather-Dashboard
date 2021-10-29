@@ -4,20 +4,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 </head>
 <body>
     <header class="jumbotron">
-        <h1>Weather Dashboard</h1>
+        <h1 class="text-center">Weather Dashboard</h1>
     </header>
-    <div class="container">
-    <div class="current">
-    <div class="fiveDay" id="1"></div>
-    <div class="fiveDay" id="2"></div>
-    <div class="fiveDay" id="3"></div>
-    <div class="fiveDay" id="4"></div>
-    <div class="fiveDay" id="5"></div>
+
+    <!-- for all weather data to render -->
+    <div class="col-lg-8">
+    <div class="row weather-box">
+    <div class= "col-lg-12">
+        <div class="weather-cont"></div>
+        <span>
+            <div class="city"></div><img id="wicon"></img>
+            <div class="status"></div>
+        </span>
+    <div class="temp"></div>
+    <div class="humidity"></div>
+    <div class="wind"></div>
     </div>
     </div>
+    </div>
+    <hr>
+
+    <div class="row">
+    <div class="col-lg-12 forecast">
+    <h4 class="5day">Five Day Forecast</h4>
+    <!-- 1st day forecast -->
+    <div class="text-center">
+        <div class="card">
+            <div class="card-body" id="day1">
+            </div>
+        </div>
+        <!-- 2nd day forecast -->
+        <div class="text-center">
+            <div class="card">
+                <div class="card-body" id="day2">
+                </div>
+            </div>
+        <!-- 3rd day forecast -->
+        <div class="text-center">
+            <div class="card">
+                <div class="card-body" id="day3">
+                </div>
+            </div>
+        <!-- 4th day forecast -->
+        <div class="text-center">
+            <div class="card">
+                <div class="card-body" id="day4">
+                </div>
+            </div>
+        <!-- 5th day forecast -->
+        <div class="text-center">
+            <div class="card">
+                <div class="card-body" id="day5">
+                </div>
+            </div>        
+    </div>
+</div>
+</div>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
